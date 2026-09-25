@@ -1,4 +1,4 @@
-import jsonc
+import json
 import os
 import streamlit as st
 from anthropic import Anthropic
