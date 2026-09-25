@@ -13,6 +13,9 @@ except Exception:
 
 client = Anthropic(api_key=api_key)
 
+cache_stats = {"hits": 0, "misses": 0, "tokens_saved": 0}
+
+
 # ===== SWAP THIS BLOCK FOR YOUR ORGANISATION =====
 ORG_FACTS = """
 MEMBERSHIP: free to join at codingblackfemales.com/join-us
@@ -124,7 +127,7 @@ if __name__ == "__main__":
         print("needs_human:", result["needs_human"])
     else:
         print("No valid response after 3 attempts.")
-        print("cache:", cache_stats)
+    print("cache:", cache_stats)
 
 
 
